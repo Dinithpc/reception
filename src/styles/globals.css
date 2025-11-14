@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f9fafb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Fix for input fields, select dropdowns, and textareas */
+input,
+select,
+textarea {
+  color: #111827 !important; /* dark gray text */
+  background-color: white !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important; /* gray placeholder text */
+}
+
+/* Ensure disabled inputs are visible */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: #f3f4f6 !important;
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* Fix for select option elements */
+select option {
+  color: #111827 !important;
+  background-color: white !important;
+}
+
+/* Calendar specific fixes */
+.react-calendar {
+  background-color: white !important;
+}
+
+.react-calendar button {
+  color: #111827 !important;
+}
+
+.react-calendar__tile--active {
+  background: #0ea5e9 !important;
+  color: white !important;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #0284c7 !important;
+  color: white !important;
+}
+
+.react-calendar__navigation button {
+  color: #111827 !important;
+  background-color: transparent !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #f3f4f6 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #0369a1 !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #9ca3af !important;
+}
+
+/* Ensure all text in the app is dark */
+body {
+  color: #111827;
+}
+
+/* Fix for date input calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
