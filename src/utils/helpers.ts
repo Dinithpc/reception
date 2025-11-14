@@ -76,6 +76,7 @@ export function generateTimeSlots() {
       endTime,
       display: `${formatTime(startTime)} - ${formatTime(endTime)}`,
       price: hour >= 18 ? 1500 : 1000,
+      available:true,
     });
   }
 
